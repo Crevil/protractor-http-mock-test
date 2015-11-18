@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>AngularJS protractor-http-mock test application</title>
+    <meta name="viewport" content="width=device-width">
+
+</head>
+    <body ng-controller="MainCtrl">
+
+        <h1>GitHub results on "protractor-http-mock" inline:</h1>
+        <p ng-repeat="d in inlineData">{{d.name}}</p>
+
+        <h1>GitHub results on "protractor-http-mock" param:</h1>
+        <p ng-repeat="d in paramData">{{d.name}}</p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script>
+            var app = angular.module('app', []);
+
+            app.controller('MainCtrl', function ($scope, $http) {
+                $scope.name = 'World';
+
+                $http.get('https://api.github.com/search/repositories?q=protractor-http-mock&order=asc')
+                    .then(function (success) {
+                        $scope.inlineData = success.data.items;
+                    });
+
+                $http.get('https://api.github.com/search/repositories', { params: { 'q': 'protractor-http-mock', 'order': 'asc'}})
+                    .then(function (success) {
+                        $scope.paramData = success.data.items;
+                    });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+﻿[
+    {
+        "request": {
+            "path": "https://api.github.com/search/repositories",
+            "method": "GET",
+            "params": {
+                "q": "protractor-http-mock"
+            }
+        },
+        "response": {
+            "status": 200,
+            "data": {
+                "items": [
+                    {
+                        "name": "repoName1"
+                    },
+                    {
+                        "name": "repoName2"
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "request": {
+            "path": "https://api.github.com/search/repositories",
+            "method": "GET",
+            "queryString": {
+                "q": "protractor-http-mock",
+                "order": "asc"
+            }
+        },
+        "response": {
+            "status": 200,
+            "data": {
+                "items": [
+                    {
+                        "name": "repoName1"
+                    },
+                    {
+                        "name": "repoName2"
+                    }
+                ]
+            }
+        }
+    }
+]

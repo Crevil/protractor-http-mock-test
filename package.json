@@ -1,0 +1,32 @@
+{
+  "name": "protractor-http-mock-test",
+  "version": "1.0.0",
+  "description": "Small AngularJS application for testing the protractor-http-mock plugin",
+  "main": "index.html",
+  "scripts": {
+    "postinstall": "node_modules\\.bin\\webdriver-manager update --standalone",
+    "start": "http-server ./ -a localhost -p 9000",
+    "test": "node node_modules\\protractor\\bin\\protractor protractor.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crevil/protractor-http-mock-test.git"
+  },
+  "keywords": [
+    "angularjs",
+    "protractor",
+    "protractor-http-mock"
+  ],
+  "author": "Bjørn Sørensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crevil/protractor-http-mock-test/issues"
+  },
+  "homepage": "https://github.com/Crevil/protractor-http-mock-test#readme",
+  "dependencies": {
+    "http-server": "^0.8.5",
+    "jasmine-core": "^2.3.4",
+    "protractor": "^3.0.0",
+    "protractor-http-mock": "^0.1.18"
+  }
+}
