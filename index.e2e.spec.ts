@@ -1,8 +1,40 @@
-﻿var mock = require('protractor-http-mock');
+﻿/// <reference path="typings/tsd.d.ts" />
+
+import mock = require('protractor-http-mock');
 
 describe('index', function () {
 
     beforeEach(function () {
+        interface g {
+            name: string;
+        }
+        interface h {
+            id: number;
+        }
+        var getMock: GetMock<g> = {
+            request: {
+                path: function() { return '2';},
+                queryString: {
+                    'd': 'd',
+                    'w': '2'
+                }
+            },
+            response: {
+                data: {name: 'd'}
+            }
+        };
+        var postMock: PostMock<h, g> = {
+            request: {
+                path: function() { return '2';},
+                data: {
+                    id: 1
+                }
+            },
+            response: {
+                data: {name: 'd'}
+            }
+        };
+        mock([postMock]);
         mock(['github']);
     });
 

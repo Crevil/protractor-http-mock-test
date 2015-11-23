@@ -1,0 +1,24 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "angular-protractor/angular-protractor.d.ts": {
+      "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
+    },
+    "selenium-webdriver/selenium-webdriver.d.ts": {
+      "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
+    },
+    "node/node.d.ts": {
+      "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "ba424f7ee39717d51c17699a09ac8df312a7e9a1"
+    }
+  }
+}
